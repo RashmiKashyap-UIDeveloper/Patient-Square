@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Patient Square</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+  <!-- Favicon -->
+  <link href="../static/img/favicon.ico" rel="icon" />
+  <link href="../static/img/favicon.ico" rel="apple-touch-icon" />
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="../static/vendor/remixicon/remixicon.css" rel="stylesheet" />
+
+  <!-- CSS File -->
+  <link href="../static/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!--Free Trial Modal Start-->
+  <div class="modal fade modal-dark" id="free_trial" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded p-9 pb-10 pt-8 position-relative">
+        <button type="button"
+          class="btn-close border border-gray-300 rounded-circle p-2 position-absolute end-0 top-0 m-3 bg-light"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          <div class="form-wrapper">
+            <div class="form-tittle text-center">
+              <h2 class="mb-0 fw-bold fs-1 mb-5">Start 30 Days Free Trial</h2>
+            </div>
+            <form id="free_trial_form" onsubmit="return f(this);" action="https://httpbin.org/post" method="POST">
+              <div class="row">
+                <div class="col-lg-12 mb-4">
+                  <label class="fs-7 form-label required">Your Name</label>
+                  <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required="" />
+                </div>
+                <div class="col-lg-12 mb-4">
+                  <label class="fs-7 form-label required">Your Email</label>
+                  <input type="text" name="email" class="form-control" placeholder="Enter Your Email" required="" />
+                </div>
+                <div class="col-lg-12">
+                  <label class="fs-7 form-label required">Your Phone</label>
+                  <input type="text" name="phone" class="form-control" placeholder="Enter Your Phone" required="" />
+                </div>
+                <div class="col-lg-12">
+                  <div class="submit-info text-center mt-9">
+                    <input id="send" type="submit" value="Get Started" class="btn btn-primary py-3 w-100" />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Free Trial Modal end-->
+
+  <!--Header Start-->
+  <header id="header" class="fixed-top">
+    <div class="container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo me-3">
+        <img src="../static/img/logo.svg" alt class="img-fluid min-h-37px mh-38px" />
+      </a>
+      <nav id="navbar" class="navbar p-0 fs-7 flex-grow-xl-1">
+        <ul class="m-0 list-inline d-flex align-items-center w-100 w-xl-75 ms-auto">
+          <li>
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li>
+            <a class="nav-link active" href="about-us.html">About Us</a>
+          </li>
+          <li>
+            <a class="nav-link" href="features.html">Features</a>
+          </li>
+          <li>
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+          <li>
+            <a class="nav-link" href="contact-us.html">Contact Us</a>
+          </li>
+          <li class="d-flex align-items-center flex-wrap m-xl-0 ms-xl-auto ps-2">
+            <a class="btn btn-outline-secondary py-2 px-5 me-2 my-1" href="#" data-bs-toggle="modal"
+              data-bs-target="#free_trial">Start Free Trial
+            </a>
+            <a class="btn btn-secondary d-inline-flex align-items-center py-2 px-5 text-white my-1" href="sign-in.html">
+              <i class="ri-user-line me-1"></i> Sign In
+            </a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <main id="main">
+    <!--Hero Start-->
+    <section
+      class="about-section d-flex align-items-center pt-19 pb-20 bg-light text-center inner-page-banner overlay-outer mt-19">
+      <div class="overlay"></div>
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-sm-12 mx-auto">
+            <div>
+              <h1 class="fw-bold mb-0 text-white fs-2hx">About Us</h1>
+            </div>
+            <!--Breadcrumbs Start-->
+            <div class="breadcrumbs fs-8 text-gray-500 d-flex align-items-center justify-content-center w-100">
+              <ol class="d-flex list-inline p-0">
+                <li class="home"><a href="index.html">Home</a></li>
+                <li>About Us</li>
+              </ol>
+            </div>
+            <!--Breadcrumbs End-->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero End-->
+
+    <!--About Start-->
+    <section id="about" class="d-flex align-items-center">
+      <div class="container-xl fs-7">
+        <div class="row">
+          <div class="col-lg-9 mx-auto">
+            <div class="row gx-5">
+              <div class="col-md-6">
+                <div class="bg-light rounded-lg min-h-100 overflow-hidden img-wrapper align-items-stretch">
+                  <img src="../static/img/about-us.avif" alt="" class="img-fluid w-100 " />
+                </div>
+              </div>
+              <div class="col-md-6 mt-8 mt-md-0">
+                <div class="section-title">
+                  <h5 class="position-relative d-inline-block text-primary text-uppercase fs-5 mb-1 fw-bold">
+                    Who We Are
+                  </h5>
+                  <h2 class="mb-0 fw-bold fs-2qx mb-2">
+                    Empowering Health, One Step at a Time
+                  </h2>
+                </div>
+                <div class="fs-7">
+                  <p>
+                    At Patient Square, we are redefining healthcare with
+                    cutting-edge technology and a human touch. Our goal is to
+                    provide accessible, efficient, and personalized solutions
+                    for everyone. Our goal is to provide accessible,
+                    efficient, and personalized solutions for everyone.
+                  </p>
+                  <h4 class="fs-4 fw-bold mt-2 mb-1">
+                    Improving health equity
+                  </h4>
+                  <p>
+                    We are redefining healthcare with cutting-edge technology
+                    and a human touch. Our goal is to provide accessible,
+                    efficient, and personalized solutions for everyone
+                    personalized solutions for everyone.
+                  </p>
+                  <div class="row">
+                    <div class="col-sm-6 mt-2">
+                      <p class="mb-1">
+                        <i class="ri-checkbox-circle-fill text-primary me-3"></i>Award Winning
+                      </p>
+                      <p class="mb-0">
+                        <i class="ri-checkbox-circle-fill text-primary me-3"></i>Voluptas Sit
+                      </p>
+                    </div>
+                    <div class="col-sm-6 mt-2">
+                      <p class="mb-1">
+                        <i class="ri-checkbox-circle-fill text-primary me-3"></i>Consequuntur Eos
+                      </p>
+                      <p class="mb-0">
+                        <i class="ri-checkbox-circle-fill text-primary me-3"></i>Fair Prices
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="">
+                    <a href="contact-us.html" class="btn btn-primary d-inline-block py-2 px-5 fs-7 mt-8">Contact Us <i
+                        class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row gx-5 separator ">
+              <div class="col-sm-6  d-none d-xl-block">
+                <div class="border-top mt-15 pt-15"></div>
+              </div>
+              <div class="col-sm-6  d-none d-xl-block">
+                <div class="border-top mt-15 pt-15"></div>
+              </div>
+            </div>
+            <div class="row gx-5 ">
+              <div class="col-xl-6 mt-15 mt-xl-0">
+                <div class="">
+                  <div class="fs-7">
+                    <div class="section-title">
+                      <h5 class="position-relative d-inline-block text-primary text-uppercase fs-6 mb-1 fw-bold">
+                        Our Mission
+                      </h5>
+                      <h2 class="mb-0 fw-bold fs-2x mb-2">
+                        Empowering Health, One Step at a Time
+                      </h2>
+                    </div>
+                    <p class="mb-0">
+                      Our mission at Patient Square is to revolutionize
+                      healthcare accessibility and enhance patient well-being
+                      by providing innovative, user-friendly solutions. We aim
+                      to bridge the gap between patients and providers,
+                      ensuring everyone receives the care they deserve.
+                    </p>
+                    <div class="row mt-7">
+                      <div class="col-sm-6 mb-5">
+                        <div class="icon-boxes text-center min-h-100 bg-light rounded-lg border p-5">
+                          <h4 class="fs-3 fw-bold mt-2 mb-1">
+                            Accessibility for All
+                          </h4>
+                          <p class="description m-0 fs-7 opacity-75">
+                            Making healthcare accessible, affordable, and
+                            inclusive for patients of all backgrounds.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6 mb-5">
+                        <div class="icon-boxes text-center min-h-100 bg-light rounded-lg border p-5">
+                          <h4 class="fs-3 fw-bold mt-2 mb-1">
+                            Innovation in Care
+                          </h4>
+                          <p class="description m-0 fs-7 opacity-75">
+                            Harnessing the latest technology to deliver
+                            seamless and reliable healthcare experiences.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6 mb-5 mb-sm-0">
+                        <div class="icon-boxes text-center min-h-100 bg-light rounded-lg border p-5">
+                          <h4 class="fs-3 fw-bold mt-2 mb-1">
+                            Empowering Patients
+                          </h4>
+                          <p class="description m-0 fs-7 opacity-75">
+                            Putting patients in control of their health with
+                            tools to manage and monitor their well-being.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                        <div class="icon-boxes text-center min-h-100 bg-light rounded-lg border p-5">
+                          <h4 class="fs-3 fw-bold mt-2 mb-1">
+                            Collaboration with Providers
+                          </h4>
+                          <p class="description m-0 fs-7 opacity-75">
+                            Supporting healthcare professionals with intuitive
+                            solutions to improve efficiency.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 mt-15 mt-xl-0">
+                <div class="fs-7">
+                  <div class="section-title">
+                    <h5 class="position-relative d-inline-block text-primary text-uppercase fs-6 mb-1 fw-bold">
+                      Our Vision
+                    </h5>
+                    <h2 class="mb-0 fw-bold fs-2x mb-2">
+                      A Healthier Tomorrow, Together
+                    </h2>
+                  </div>
+                  <p class="mb-0">
+                    Our vision is to create a world where healthcare is not
+                    only accessible but also personalized and proactive. We
+                    envision a future where patients and providers are
+                    seamlessly connected, fostering better outcomes and
+                    healthier communities.
+                  </p>
+                </div>
+                <div class="">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <ul class="ps-4">
+                        <li>
+                          <div class="">
+                            <h4 class="fs-4 fw-bold mt-2 mb-1">
+                              Building Trust
+                            </h4>
+                            <p class="description m-0 fs-7 opacity-75">
+                              Fostering transparency and trust in healthcare,
+                              ensuring every patient feels seen, heard, and
+                              cared for.
+                            </p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="">
+                            <h4 class="fs-4 fw-bold mt-2 mb-1">
+                              Advancing Technology
+                            </h4>
+                            <p class="description m-0 fs-7 opacity-75">
+                              Leveraging cutting-edge technology to redefine
+                              the standards of care, making it more
+                              intelligent, intuitive, and patient-centered.
+                            </p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="bg-light rounded-lg overflow-hidden img-wrapper mt-3">
+                        <img src="../static/img/bg_1.jpg" alt="" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--About End-->
+
+    <!--Core Values Start-->
+    <section class="d-flex align-items-center bg-light">
+      <div class="container-xl fs-7">
+        <div class="row gx-5">
+          <div class="col-sm-12">
+            <div class="text-center mb-10">
+              <div class="section-title">
+                <h5 class="position-relative d-inline-block text-primary text-uppercase fs-5 mb-1 fw-bold">
+                  Our Core Values
+                </h5>
+                <h2 class="mb-0 fw-bold fs-2qx mb-2">
+                  Shaping Healthcare Through Our Values
+                </h2>
+                <p class="fs-7">
+                  Voluptas sit aspernatur, odit aut consequuntur ratione
+                  sequinesciunt.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="row text-center">
+              <div class="col-sm-6 col-lg-4">
+                <div class="icon-boxes p-8">
+                  <div class="icon-box mb-2">
+                    <div class="icon">
+                      <i class="ri-lightbulb-line fs-2qx"></i>
+                    </div>
+                  </div>
+                  <h4 class="fs-3 fw-bold mt-2 mb-1">Innovation</h4>
+                  <p class="m-0">
+                    We put patients and healthcare providers first, ensuring
+                    our solutions are designed with empathy and understanding.
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="icon-boxes p-8">
+                  <div class="icon-box mb-2">
+                    <div class="icon">
+                      <i class="ri-service-line fs-2qx"></i>
+                    </div>
+                  </div>
+                  <h4 class="fs-3 fw-bold mt-2 mb-1">Compassion</h4>
+                  <p class="m-0">
+                    We leverage cutting-edge technology to create
+                    transformative solutions that make healthcare accessible
+                    and efficient.
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="icon-boxes p-8">
+                  <div class="icon-box mb-2">
+                    <div class="icon">
+                      <i class="ri-shield-check-line fs-2qx"></i>
+                    </div>
+                  </div>
+                  <h4 class="fs-3 fw-bold mt-2 mb-1">Integrity</h4>
+                  <p class="m-0">
+                    We are committed to transparency, data security, and
+                    ethical practices in every aspect of our business.
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="icon-boxes p-8">
+                  <div class="icon-box mb-2">
+                    <div class="icon">
+                      <i class="ri-award-line fs-2qx"></i>
+                    </div>
+                  </div>
+                  <h4 class="fs-3 fw-bold mt-2 mb-1">Excellence</h4>
+                  <p class="m-0">
+                    We strive for the highest standards of quality and
+                    performance in everything we do.
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="icon-boxes p-8">
+                  <div class="icon-box mb-2">
+                    <div class="icon">
+                      <i class="ri-group-2-line fs-2qx"></i>
+                    </div>
+                  </div>
+                  <h4 class="fs-3 fw-bold mt-2 mb-1">Collaboration</h4>
+                  <p class="m-0">
+                    We work hand-in-hand with patients, providers, and
+                    stakeholders to create solutions that truly meet their
+                    needs
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="icon-boxes p-8">
+                  <div class="icon-box mb-2">
+                    <div class="icon">
+                      <i class="ri-wheelchair-line fs-2qx"></i>
+                    </div>
+                  </div>
+                  <h4 class="fs-3 fw-bold mt-2 mb-1">Accessibility</h4>
+                  <p class="m-0">
+                    We believe healthcare should be simple, inclusive, and
+                    available to everyone, everywhere.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Core Values End-->
+
+    <!--CTA Start-->
+    <section id="cta" class="cta bg-primary py-15 overlay-outer"
+      style="background-image: url('../static/img/bg_2.jpg')">
+      <div class="overlay"></div>
+      <div class="container-xl">
+        <div class="text-center mb-8">
+          <div class="section-title">
+            <h2 class="mb-0 fw-bold fs-2qx mb-2 text-white">
+              Join Us in Transforming Healthcare
+            </h2>
+            <p class="text-white fs-7 mb-1">
+              Discover how Patient Square makes healthcare smarter, simpler,
+              and more accessible.
+            </p>
+            <p class="text-white fs-7">
+              Personalized insights just a click away.
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="#" class="btn btn-outline-light d-inline-block py-3 px-5 fs-7">Get Started Today <i
+              class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--CTA End-->
+  </main>
+  <!--Main End-->
+
+  <!--Footer Start-->
+  <footer id="footer" class="border-top">
+    <div class="container-xl py-6">
+      <div class="row gx-4">
+        <div class="col-md-4 my-4">
+          <img src="../static/img/logo.svg" alt class="img-fluid mb-4 mh-38px min-h-37px" />
+          <p class="m-0">
+            We’re not traditional healthcare. We know you’re not just your
+            diagnosis. Start with baseline testing of the most critica get a
+            personalized go-forward plan.
+          </p>
+        </div>
+        <div class="col-md-3  my-4">
+          <h3 class=" fs-7 mb-3 text-uppercase">Contact Us</h3>
+          <ul class="m-0 p-0 list-inline">
+            <li class="ms-0 mb-2 d-flex align-items-center">
+              <span
+                class="rounded-circle bg-light-blue text-primary mh-30px min-h-30px min-w-30px mh-30px d-inline-flex align-items-center justify-content-center me-2">
+                <i class="ri-phone-line fs-7"></i>
+              </span>
+              <a href="#" class="text-muted text-hover-primary">0172-4188860 –
+                61</a>
+            </li>
+            <li class="m-0 d-flex align-items-center">
+              <span
+                class="rounded-circle bg-light-blue text-primary mh-30px min-h-30px min-w-30px mh-30px d-inline-flex align-items-center justify-content-center me-2">
+                <i class="ri-mail-line fs-7"></i>
+              </span>
+              <a href="#" class="text-muted text-hover-primary">info@example.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3  my-4">
+          <h3 class="fs-7 mb-2 text-uppercase">Quick Links</h3>
+          <ul class="navbar flex-column justify-content-start align-items-start m-0 p-0 list-inline">
+            <li class="mx-0 mb-1">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+            <li class="mx-0 mb-1">
+              <a class="nav-link" href="features.html">Features</a>
+            </li>
+            <li class="mx-0 mb-1">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="mx-0">
+              <a class="nav-link" href="contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2  my-4">
+          <h3 class=" fs-7 mb-1 text-uppercase">Follow Us</h3>
+          <div class="flex social-links d-flex justify-content-start fs-2">
+            <div class="social-links-icon-box flex-center me-2">
+              <a href="#">
+                <i class="ri-facebook-circle-line"></i>
+              </a>
+            </div>
+            <div class="social-links-icon-box flex-center me-2">
+              <a href="#">
+                <i class="ri-twitter-line"></i>
+              </a>
+            </div>
+            <div class="social-links-icon-box flex-center me-2">
+              <a href="#">
+                <i class="ri-instagram-line"></i>
+              </a>
+            </div>
+            <div class="social-links-icon-box flex-center">
+              <a href="#">
+                <i class="ri-linkedin-box-line"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-dark-blue p-4 text-center text-white">
+      <div class="opacity-75">
+        <span> &copy; Copyright </span>
+        <strong> <span>Patient Square</span> </strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!--Footer End-->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+  <!--Script-->
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/main.js"></script>
+</body>
+
+</html>
