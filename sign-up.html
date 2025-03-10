@@ -8,67 +8,72 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicon -->
-  <link href="../static/img/favicon.ico" rel="icon">
-  <link href="../static/img/favicon.ico" rel="apple-touch-icon">
+  <link href="./static/img/favicon.ico" rel="icon">
+  <link href="./static/img/favicon.ico" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
-  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="./static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="./static/vendor/remixicon/remixicon.css" rel="stylesheet">
 
   <!-- CSS File -->
-  <link href="../static/css/style.css" rel="stylesheet">
+  <link href="./static/css/style.css" rel="stylesheet">
 </head>
 
 <body class="">
   <main id="main">
     <section class="min-h-100vh d-flex align-items-center justify-content-center position-relative overlay-outer p-0">
-      <div class="overlay w-50 bg-light  d-none d-md-block"></div>
+      <div class="overlay w-50 bg-light d-none d-md-block"></div>
       <div class="container-xl">
         <div class="row gx-5">
           <div class="col-md-6 px-10 px-xl-15 d-flex align-items-center bg-light py-10">
             <div class="">
               <div>
                 <a href="index.html" class="logo">
-                  <img src="../static/img/logo.svg" alt="Logo" class="img-fluid" style="max-height:50px">
+                  <img src="./static/img/logo.svg" alt="Logo" class="img-fluid" style="max-height:50px">
                 </a>
               </div>
               <div class="section-title text-start mb-7 mt-8">
-                <h2 class="mb-0 fw-bold fs-2qx mb-2">Welcome Back!</h2>
-                <p class="fs-7">Sign in for a seamless healthcare experience with personalized recommendations and
+                <h2 class="mb-0 fw-bold fs-2qx mb-2">Create Your Account</h2>
+                <p class="fs-7">Join us for a seamless healthcare experience with personalized recommendations and
                   secure access to your medical needs.</p>
               </div>
               <div class="fs-7 mt-5 pt-5 border-top border-gray-300 text-start">
-                Don't have an account? <a href="sign-up.html" class="text-primary fw-bold">Sign Up Here</a>
+                Already have an account? <a href="sign-in.html" class="text-primary fw-bold">Sign In Here</a>
               </div>
             </div>
           </div>
           <div class="col-md-6 px-10 px-xl-15 py-10">
             <div class="form-wrapper">
-              <form id="signin-form" action="#" method="POST">
+              <form id="signup-form" action="#" method="POST">
                 <div class="row gx-3">
-                  <div class="col-md-12 mb-3">
+                  <div class="col-lg-6 mb-3">
+                    <label class="fs-7 form-label required">Full Name</label>
+                    <input type="text" name="full_name" class="form-control" id="name" placeholder="Enter Your Name"
+                      required>
+                  </div>
+                  <div class="col-lg-6 mb-3">
                     <label class="fs-7 form-label required">Email Address</label>
                     <input type="email" name="email" class="form-control" id="email" placeholder="Enter Your Email"
                       required>
                   </div>
                   <div class="col-md-12 mb-3">
-                    <label class="fs-7 form-label required">Password</label>
+                    <label class="fs-7 form-label required">Create Password</label>
                     <input type="password" name="password" class="form-control" id="password"
                       placeholder="Enter Password" required>
                   </div>
-                  <div class="col-md-12 mb-3 d-flex align-items-center justify-content-between flex-wrap">
+                  <div class="col-md-12 mb-3">
                     <div class="form-check mb-5 d-flex">
-                      <input class="form-check-input me-2" type="checkbox" id="rememberMe" required>
-                      <label class="form-check-label fs-7" for="rememberMe">
-                        Remember Me
+                      <input class="form-check-input me-2" type="checkbox" id="confirm" required>
+                      <label class="form-check-label fs-7" for="confirm">
+                        I agree to the <a href="terms.html" class="text-primary">Terms & Conditions</a>
                       </label>
                     </div>
-                    <a href="#" class="text-primary fs-7 mb-5">Forgot Password?</a>
                   </div>
                   <div class="col-lg-12 mt-3">
                     <div class="submit-info text-center">
-                      <button class="btn btn-primary border-light w-100 p-4 fs-7" type="submit">Sign In</button>
+                      <button class="btn btn-primary border-light w-100 p-4 fs-7" type="submit">Create My
+                        Account</button>
                     </div>
                   </div>
                 </div>
@@ -78,10 +83,11 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <!--Script-->
-  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
